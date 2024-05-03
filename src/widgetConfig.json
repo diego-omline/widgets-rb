@@ -1,0 +1,13 @@
+{
+    "urlBase": "https://dev.resa-booking.com/front/widgetBase/v2/module",
+    "types": {
+        "promo": {
+            "file": "promo.240314",
+            "tag": "rb-promo"
+        },
+        "searchBar": {
+            "file": "searchBar.240314",
+            "tag": "rb-search-bar"
+        }
+    }
+}

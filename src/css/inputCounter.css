@@ -1,0 +1,24 @@
+:root{
+    --h-inputCounter: 40px;
+}
+
+.containerInputCounter{
+    display: flex;
+    align-items: center;
+}
+
+.inputCounter{
+    height: var(--h-inputCounter) !important;
+    text-align: center !important;
+    border-radius: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
+.btnInputCounter{
+    padding: 0px 15px;
+    height: var(--h-inputCounter);
+    line-height: var(--h-inputCounter);
+    border: 1px solid #ccc;
+    cursor: pointer;
+}

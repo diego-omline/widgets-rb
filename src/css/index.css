@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --colorBackground: "#555";
+    --colorText: "#CCC";
+}
+
+.rb_loading {
+    width: 30px;
+    margin: 5px auto;
+    display: block;
+}

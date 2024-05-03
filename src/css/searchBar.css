@@ -1,0 +1,233 @@
+
+@import "./index.css";
+@import "./inputCounter.css";
+
+:root{
+    --height-searchBar: 46px;
+    --bg-base: #FFF;
+}
+
+@font-face {
+    font-family: 'customIconsRb';
+    src:  url('https://dev.resa-booking.com/front/widgetBase/v2/module/fonts/icomoon.eot?epxohk');
+    src:  url('https://dev.resa-booking.com/front/widgetBase/v2/module/fonts/icomoon.eot?epxohk#iefix') format('embedded-opentype'),
+      url('https://dev.resa-booking.com/front/widgetBase/v2/module/fonts/icomoon.ttf?epxohk') format('truetype'),
+      url('https://dev.resa-booking.com/front/widgetBase/v2/module/fonts/icomoon.woff?epxohk') format('woff'),
+      url('https://dev.resa-booking.com/front/widgetBase/v2/module/fonts/icomoon.svg?epxohk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+} 
+.containerSearchBarRb i{
+    font-family: 'customIconsRb' !important;
+    font-style: normal;
+}
+
+.containerSearchBarRb input, .containerSearchBarRb select{
+    width: 100%;
+    display: block;
+    height: var(--height-searchBar);
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: var(--bg-base);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    text-align: center;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.containerSearchBarRb input:focus, .containerSearchBarRb select:focus{
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
+}
+
+.modalCapacitySearchBarRb {
+    background-color: var(--bg-base);
+    box-sizing: border-box;
+    box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
+    border-radius: 8px;
+    color: #1a1a1a;
+    display: block;
+    padding: 20px;
+    position: absolute;
+    width: 300px;
+    z-index: 10;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.modalCapacitySearchBarRb button{
+    background: var(--bg-base);
+    border: 1px solid var(--colorText);
+    color: var(--colorText);
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    height: calc(var(--height-searchBar)* 0.7);
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    line-height: 22px;
+}
+
+.modalCapacitySearchBarRb select{
+    height: 40px !important;
+}
+
+.btnInputCounter{
+    background-color: var(--colorBackground);
+    color: #FFF;
+    font-size: 14px;
+}
+
+.modalCapacitySearchBarRb .row{
+    overflow: hidden;
+    margin: 10px 0px;
+    align-items: center;
+    display: flex;
+}
+
+.containerCapacitySearchBarRb{
+    position:relative;
+}
+
+.containerDateSearchBarRb i:before{
+    content: "\f073";
+}
+
+.containerTypeSearchBarRb i:before{
+    content: "\f015";
+}
+
+.containerCapacitySearchBarRb i:before{
+    content: "\f007";
+}
+
+.containerBtnSearchBarRb i:before{
+    content: "\f002";
+}
+
+.iconInputRb{
+    display: inline-block;
+    padding: 7px;
+    padding-top: 10px;
+    background: var(--colorBackground);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    line-height: 1;
+    margin: 0px;
+}
+
+div:has(> .iconInputRb){
+    display: flex;
+}
+
+.containerSearchBarRb>form>div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input:has(+ .iconInputRb), select:has(+ .iconInputRb), .containerCapacitySearchBarRb>input, .containerDateSearchBarRb>input{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.containerBtnSearchBarRb button{
+    background: var(--colorText);
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    height: var(--height-searchBar);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.containerCapacitySearchBarRb{
+    float:left;
+    width: 65%;
+    padding-right: 10px;
+}
+
+.containerBtnSearchBarRb{
+    float:left;
+    width: 35%;
+    padding-left: 10px;
+}
+
+.containerSearchBarRb{
+    container-type: inline-size;
+}
+
+
+@container (min-width: 768px) {
+
+    .containerDateSearchBarRb{
+        float: left;
+        width: 33%;
+        padding-right: 10px;
+    }
+
+    .containerTypeSearchBarRb{
+        float: left;
+        width: 25%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .containerCapacitySearchBarRb{
+        float: left;
+        width: 25%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .containerBtnSearchBarRb{
+        float: left;
+        width: 17%;
+        padding-left: 10px;
+    }
+}
+
+/* EASEPICK */
+
+.container.range-plugin .calendar>.days-grid>.day.end, 
+.container.range-plugin .calendar>.days-grid>.day.start {
+    background-color: var(--colorBackground);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.in-range {
+    background-color: color-mix(in srgb, var(--colorBackground), transparent 65%);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.start:after {
+    border-left: 8px solid var(--colorBackground);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.start.flipped:after {
+    border-right-color: var(--colorBackground);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.end:after {
+    border-right: 8px solid var(--colorBackground);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.end.flipped:after {
+    border-left-color: var(--colorBackground);
+}
+
+.calendar>.days-grid>.day:hover {
+    border: 1px solid var(--colorBackground);
+    color: var(--colorBackground);
+}
